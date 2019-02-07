@@ -1,0 +1,115 @@
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fade-out{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.hide{
+    display:none;
+    animation: fade-out 0.5s linear;
+}
+
+body{
+    background-color: peru;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+.wrap{
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.wrap_item{
+    animation: fade-in 1s linear;
+}
+.askNameForm h1{
+    font-size: 50px;
+    font-weight: 300;
+}
+.inputName{
+    font-size: 50px;
+    font-weight: 300;
+    background-color: unset;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+    text-align: center;
+    outline: none;
+    width: 500px;
+}
+.time{
+    font-size: 150px;
+}
+.greeting{
+    font-size: 50px;
+    font-weight: 500;
+}
+.todoForm h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.todoForm_box{
+    background-color: unset;
+    border: none;
+    border-bottom: 3px solid white;
+    outline: none;
+    font-size: 30px;
+    width: 450px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+.todoList{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+.todoList h2{
+    margin: 0px;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.todoList li{
+    font-size: 30px;
+    font-weight: 600;
+    padding-right: 30px;
+}
+.todoList li button{
+    background-color: unset;
+    border: none;
+    cursor: pointer;
+    color: transparent;
+    font-size: 20px;
+    margin-right: 10px;
+    align-self: top;
+    padding-left: 8px;
+    padding-right: 8px;
+    outline: unset;
+}
+.todoList li:hover button{
+    display: inline;
+    color: gray;
+}
+.todoList li button:hover{
+    border-radius: 50%;
+    background-color: white;
+    background-origin: content-box;
+    opacity: 0.5;
+}

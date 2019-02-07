@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="wrap_item">
+                <form class="js-askNameForm askNameForm">
+                    <h1>Hello, what's your name?</h1>
+                    <input type="text" class="inputName">
+                </form>
+            </div>
+            <div class="wrap_item hide">
+                <div class="js-time time">00:00</div>
+                <div class="js-greeting greeting">
+                    <span class="js-greeting_hello">Good afternoon </span>
+                    <span class="js-greeting_userName"> madmonkey</span>
+                </div>
+                <form class="js-todoForm todoForm">
+                    <h3>
+                        What is your main focus for today?
+                    </h3>
+                    <input type="text" class="todoForm_box js-todoForm_box">
+                </form>
+                <ul class="js-todoList todoList">
+                    <h2 class="js-todoList_title hide">TODAY</h2>
+                </ul>
+            </div>
+        </div>
+        <script src="greeting.js"></script>
+        <script src="getTime.js"></script>
+        <script src="todoList.js"></script>
+    </body>
+</html>

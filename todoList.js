@@ -1,7 +1,7 @@
 const todoForm = document.querySelector('.js-todoForm');
 const todoList = document.querySelector('.js-todoList');
 const formBox = document.querySelector('.js-todoForm_box');
-const todoList_title = document.querySelector('.js-todoList_title')
+const todoList_title = document.querySelector('.js-todoList_title');
 
 const TODOS_LS = 'todos';
 
@@ -11,14 +11,30 @@ function saveTodo(){
     localStorage.setItem(TODOS_LS, JSON.stringify(todos));
 }
 
+function delTodo(btn){
+    const li = btn.path[1];
+
+    todoList.removeChild(li);
+
+    const newTodoList = todos.filter(function(todo){
+        return todo.id !== parseInt(li.id);
+    });
+
+    todos = newTodoList;
+    saveTodo();
+}
+
 function addTodo(list){
     const li = document.createElement('li');
-    const button = document.createElement('button');
+    const btn = document.createElement('button');
+    const span = document.createElement('span');
     const newId = todos.length+1;
-    
-    button.innerHTML ='𝘅';
-    li.appendChild(button);
-    li.innerHTML += list;
+
+    btn.addEventListener('click', delTodo);
+    btn.innerHTML ='𝘅';
+    span.innerHTML = list;
+    li.appendChild(btn);
+    li.appendChild(span);
     todoList.appendChild(li);
     todoList_title.classList.remove(HIDE_CN);
     li.id = newId;
@@ -28,6 +44,7 @@ function addTodo(list){
         id: newId
     }
     todos.push(todoObj);
+    saveTodo();
 }
 
 function submitHandler(event){
@@ -35,7 +52,6 @@ function submitHandler(event){
     event.preventDefault();    
     formBox.value = '';
     addTodo(todo);
-    saveTodo();
 }
 
 function getTodo(){
@@ -45,19 +61,16 @@ function getTodo(){
 function loadTodo(){
     const loadedTodos = localStorage.getItem(TODOS_LS);
     const parsedTodos = JSON.parse(loadedTodos);
-    console.log(parsedTodos);
-    if(loadedTodos === null){
-        getTodo();
-    }else{
+    if(loadedTodos !== null){
         parsedTodos.forEach(function(list){
             addTodo(list.todo);
         });
-        getTodo();
     }
 }
 
 function init(){
     loadTodo();
+    getTodo();
 }
 
 init();

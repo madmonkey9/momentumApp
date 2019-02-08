@@ -20,10 +20,12 @@
 }
 
 body{
-    background-color: peru;
+    background-color: gray;
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    margin: 0px;
+    animation: fade-in 5s linear;
 }
 .wrap{
     grid-row-start: 2;
@@ -112,4 +114,12 @@ body{
     background-color: white;
     background-origin: content-box;
     opacity: 0.5;
+}
+
+
+.bgi{
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
 }

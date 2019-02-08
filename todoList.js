@@ -21,7 +21,12 @@ function delTodo(btn){
     });
 
     todos = newTodoList;
+    
     saveTodo();
+
+    if(todos.length === 0){
+        todoList_title.classList.add(HIDE_CN);
+    }
 }
 
 function addTodo(list){

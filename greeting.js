@@ -1,4 +1,3 @@
-const body = document.querySelector('body');
 const form = document.querySelector('.js-askNameForm');
 const inputNameBox = document.querySelector('.inputName');
 const Toggle = document.querySelectorAll('.wrap_item');

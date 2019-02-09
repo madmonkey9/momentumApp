@@ -1,6 +1,6 @@
 // const body = document.querySelector('body');
 
-const WEATHER_API_KEY = secret.openWeatherAPIKey;
+const WEATHER_API_KEY = '3261265a8db1a705730de0dfca55c4af';
 const COORDS_LS = 'coords'
 
 function loadWeather(lat, lon){

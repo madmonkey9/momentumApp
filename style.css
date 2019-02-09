@@ -123,3 +123,13 @@ body{
     height: 100%;
     width: 100%;
 }
+.js-weather{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    font-weight: 600;
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}

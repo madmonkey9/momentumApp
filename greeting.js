@@ -2,6 +2,7 @@ const form = document.querySelector('.js-askNameForm');
 const inputNameBox = document.querySelector('.inputName');
 const Toggle = document.querySelectorAll('.wrap_item');
 const userName = document.querySelector('.js-greeting_userName');
+const greeting_hello = document.querySelector('.js-greeting_hello');
 
 const USER_LS = 'currentUser';
 const HIDE_CN = 'hide';

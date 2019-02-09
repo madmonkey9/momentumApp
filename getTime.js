@@ -1,5 +1,16 @@
 const time = document.querySelector('.js-time');
-
+const hello = document.querySelector('.js-greeting_hello');
+function sayHello(hours){
+    if(hours>18){
+        hello.innerHTML = 'Good evening ';
+    }else if(hours>12){
+        hello.innerHTML = 'Good afternoon ';
+    }else if(hours>6){
+        hello.innerHTML = 'Good morning ';
+    }else{
+        hello.innerHTML = '잠이나 자라 ';
+    }
+}
 
 function getTime(){
     const date = new Date();
@@ -10,6 +21,8 @@ function getTime(){
     hours < 10 ? `0${hours}` : `${hours}`}:${
     min < 10 ? `0${min}` : `${min}`}:${
     sec < 10 ? `0${sec}` : `${sec}`}`;
+    
+    sayHello(hours);
 }
 
 function init(){

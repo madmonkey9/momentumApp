@@ -11,7 +11,6 @@ function loadWeather(lat, lon){
     ).then(function(response){
         return response.json();
     }).then(function(response){
-        console.log(response.weather[0].main, response.main.temp);
         const weather = response.weather[0].main;
         const temp = response.main.temp;
         const city = response.name;

@@ -13,9 +13,7 @@ function setBackground(num){
 
 function getNum(){
     const num = Math.floor(Math.random()*PICNUM) +1;
-    setBackground(num);
-    console.log(num);
-    
+    setBackground(num);    
 }
 
 function init(){
